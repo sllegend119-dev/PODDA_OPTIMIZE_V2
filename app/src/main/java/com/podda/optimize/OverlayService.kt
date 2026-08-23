@@ -90,7 +90,7 @@ class OverlayService : Service() {
 
         val refresh =
             if (Build.VERSION.SDK_INT >= 30) {
-                resources.displayMetrics.refreshRate
+                display?.refreshRate ?: 0f
             } else {
                 0f
             }
